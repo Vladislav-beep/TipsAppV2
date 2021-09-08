@@ -72,6 +72,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgy-bf-hAA">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="tintColor" red="1" green="0.67485659789999997" blue="0.37051639260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="0%">
                                             <color key="titleColor" red="1" green="0.67485659789999997" blue="0.37051639260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -82,6 +83,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1Z-RZ-tzc">
                                         <rect key="frame" x="95" y="0.0" width="50" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="tintColor" red="1" green="0.67485659789999997" blue="0.37051639260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="7%">
                                             <color key="titleColor" red="1" green="0.67485659789999997" blue="0.37051639260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -92,6 +94,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnz-IB-cja">
                                         <rect key="frame" x="188" y="0.0" width="67" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="tintColor" red="1" green="0.67485659789999997" blue="0.37051639260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="12%">
                                             <color key="titleColor" red="1" green="0.67485659789999997" blue="0.37051639260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -121,7 +124,10 @@
                     <connections>
                         <outlet property="billTextField" destination="4ZN-bO-7sN" id="Vih-MF-SdJ"/>
                         <outlet property="friendsCountLAbel" destination="Qk9-jL-9ZK" id="ekX-HI-r8m"/>
+                        <outlet property="sevenButton" destination="u1Z-RZ-tzc" id="kXs-ko-BAf"/>
                         <outlet property="stepper" destination="LQ2-G7-ikx" id="N7b-hY-Z7e"/>
+                        <outlet property="twelweButton" destination="lnz-IB-cja" id="awu-9r-gHR"/>
+                        <outlet property="zeroButton" destination="Zgy-bf-hAA" id="dtK-8b-AKw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

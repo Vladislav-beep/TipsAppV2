@@ -10,7 +10,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var billTextField: UITextField!
+    
     @IBOutlet var friendsCountLAbel: UILabel!
+    
+    @IBOutlet var twelweButton: UIButton!
+    @IBOutlet var sevenButton: UIButton!
+    @IBOutlet var zeroButton: UIButton!
+    
     @IBOutlet var stepper: UIStepper!
     
     override func viewDidLoad() {
@@ -19,11 +25,16 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func tipButtonPressed(_ sender: Any) {
+    @IBAction func tipButtonPressed(_ sender: UIButton) {
+        zeroButton.isSelected = false
+        sevenButton.isSelected = false
+        twelweButton.isSelected = false
+        
+        sender.isSelected = true
     }
     
     
-    @IBAction func stepperPressed(_ sender: Any) {
+    @IBAction func stepperPressed(_ sender: UIStepper) {
         friendsCountLAbel.text = String(format: "%.0f", stepper.value)
     }
 }
