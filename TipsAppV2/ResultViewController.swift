@@ -8,13 +8,15 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-    var result = 0
+    var result = 0.0
     
     @IBOutlet var backButton: UIButton!
+    @IBOutlet var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         backButton.layer.cornerRadius = 10
+        resultLabel.text = String(result)
         
     }
     

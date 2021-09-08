@@ -8,7 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var total = 0
+    var total = 0.0
+    var doublePersent = 0.0
+    var friendsCount = 0
     
     @IBOutlet var billTextField: UITextField!
     
@@ -34,14 +36,28 @@ class ViewController: UIViewController {
         zeroButton.isSelected = false
         sevenButton.isSelected = false
         twelweButton.isSelected = false
-        
         sender.isSelected = true
+        
+        guard let persent = Double(sender.currentTitle?.dropLast() ?? "") else { return }
+        let doublePersent = persent / 100
+        self.doublePersent = doublePersent
+        print(persent)
+        print("Double \(doublePersent)")
+        
     }
     
     
     @IBAction func stepperPressed(_ sender: UIStepper) {
         friendsCountLAbel.text = String(format: "%.0f", stepper.value)
+        friendsCount = Int(stepper.value)
     }
+    
+    @IBAction func resultButtonPressed(_ sender: UIButton) {
+        
+        guard let textField = Double(billTextField.text ?? "") else { return }
+        total = textField * (1.0 + doublePersent) / Double(friendsCount)
+        }
+        
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultVC = segue.destination as? ResultViewController

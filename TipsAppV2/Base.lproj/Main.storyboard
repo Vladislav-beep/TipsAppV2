@@ -50,6 +50,7 @@
                                         <color key="tintColor" red="1" green="0.94936118410000003" blue="0.80096160969999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Посчитать"/>
                                         <connections>
+                                            <action selector="resultButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIL-Py-Syc"/>
                                             <segue destination="6jm-LG-irH" kind="show" id="H10-3G-Mms"/>
                                         </connections>
                                     </button>
@@ -207,6 +208,7 @@
                     <navigationItem key="navigationItem" id="Jbg-Di-7ll"/>
                     <connections>
                         <outlet property="backButton" destination="4ms-3e-CXu" id="RjN-ci-2bq"/>
+                        <outlet property="resultLabel" destination="GQ9-Q5-I2e" id="E2u-ry-7HT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9W-5L-ExO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
