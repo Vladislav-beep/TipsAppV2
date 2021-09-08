@@ -19,8 +19,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kgz-Qo-eUN">
                                 <rect key="frame" x="0.0" y="276" width="414" height="620"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="oqg-xR-0rO">
-                                        <rect key="frame" x="107" y="39" width="200" height="32"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="oqg-xR-0rO">
+                                        <rect key="frame" x="112" y="39" width="190" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk9-jL-9ZK">
                                                 <rect key="frame" x="0.0" y="0.0" width="71" height="32"/>
@@ -29,7 +29,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LQ2-G7-ikx">
-                                                <rect key="frame" x="106" y="0.0" width="94" height="32"/>
+                                                <rect key="frame" x="96" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="stepperPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="uNx-B7-5hQ"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <constraints>
@@ -43,13 +46,13 @@
                                     <constraint firstItem="oqg-xR-0rO" firstAttribute="centerX" secondItem="Kgz-Qo-eUN" secondAttribute="centerX" id="huH-dz-cBC"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-bO-7sN">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-bO-7sN">
                                 <rect key="frame" x="20" y="108" width="374" height="45.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="jYJ-bJ-Yqm"/>
                                     <constraint firstAttribute="height" constant="45.5" id="xHv-od-asa"/>
                                 </constraints>
-                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -60,7 +63,7 @@
                                     <constraint firstAttribute="height" constant="26" id="wKz-HZ-OhP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.51966128069999995" blue="0.32854220830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="7j8-bW-BlJ">
@@ -72,6 +75,9 @@
                                         <state key="normal" title="0%">
                                             <color key="titleColor" red="1" green="0.67485659789999997" blue="0.37051639260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wgE-8x-Ydr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1Z-RZ-tzc">
                                         <rect key="frame" x="95" y="0.0" width="50" height="55"/>
@@ -79,6 +85,9 @@
                                         <state key="normal" title="7%">
                                             <color key="titleColor" red="1" green="0.67485659789999997" blue="0.37051639260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGL-Lk-mHG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnz-IB-cja">
                                         <rect key="frame" x="188" y="0.0" width="67" height="55"/>
@@ -86,6 +95,9 @@
                                         <state key="normal" title="12%">
                                             <color key="titleColor" red="1" green="0.67485659789999997" blue="0.37051639260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1EA-8C-b2F"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -106,6 +118,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Y5B-Pz-IGA" secondAttribute="trailing" constant="241" id="xtN-RM-xlU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="4ZN-bO-7sN" id="Vih-MF-SdJ"/>
+                        <outlet property="friendsCountLAbel" destination="Qk9-jL-9ZK" id="ekX-HI-r8m"/>
+                        <outlet property="stepper" destination="LQ2-G7-ikx" id="N7b-hY-Z7e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,8 +133,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
