@@ -39,11 +39,27 @@
                                             <constraint firstAttribute="height" constant="32" id="gfP-7Z-e3I"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcY-Gu-jcJ">
+                                        <rect key="frame" x="117" y="489" width="180" height="51"/>
+                                        <color key="backgroundColor" red="1" green="0.51966128069999995" blue="0.32854220830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="CEJ-eM-eOP"/>
+                                            <constraint firstAttribute="height" constant="51" id="WvN-a9-bRt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="tintColor" red="1" green="0.94936118410000003" blue="0.80096160969999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Посчитать"/>
+                                        <connections>
+                                            <segue destination="6jm-LG-irH" kind="show" id="H10-3G-Mms"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.94936118413303983" blue="0.80096160968458541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="oqg-xR-0rO" firstAttribute="top" secondItem="Kgz-Qo-eUN" secondAttribute="top" constant="39" id="NNV-tG-u1J"/>
+                                    <constraint firstItem="PcY-Gu-jcJ" firstAttribute="centerX" secondItem="Kgz-Qo-eUN" secondAttribute="centerX" id="Og7-Iq-1qE"/>
                                     <constraint firstItem="oqg-xR-0rO" firstAttribute="centerX" secondItem="Kgz-Qo-eUN" secondAttribute="centerX" id="huH-dz-cBC"/>
+                                    <constraint firstAttribute="bottom" secondItem="PcY-Gu-jcJ" secondAttribute="bottom" constant="80" id="sno-B9-Iln"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-bO-7sN">
@@ -124,6 +140,7 @@
                     <connections>
                         <outlet property="billTextField" destination="4ZN-bO-7sN" id="Vih-MF-SdJ"/>
                         <outlet property="friendsCountLAbel" destination="Qk9-jL-9ZK" id="ekX-HI-r8m"/>
+                        <outlet property="resultButton" destination="PcY-Gu-jcJ" id="RpX-wf-O0G"/>
                         <outlet property="sevenButton" destination="u1Z-RZ-tzc" id="kXs-ko-BAf"/>
                         <outlet property="stepper" destination="LQ2-G7-ikx" id="N7b-hY-Z7e"/>
                         <outlet property="twelweButton" destination="lnz-IB-cja" id="awu-9r-gHR"/>
@@ -133,6 +150,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="YI4-tr-kxS">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="6jm-LG-irH" customClass="ResultViewController" customModule="TipsAppV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EI2-e3-85r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAV-tS-qjZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="278"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQ9-Q5-I2e">
+                                        <rect key="frame" x="107" y="130" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="fa3-EV-74X"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <color key="textColor" red="1" green="0.51966128069999995" blue="0.32854220830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.94936118410000003" blue="0.80096160969999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="278" id="BSA-LW-Qp5"/>
+                                    <constraint firstItem="GQ9-Q5-I2e" firstAttribute="top" secondItem="bAV-tS-qjZ" secondAttribute="top" constant="130" id="N73-kI-apC"/>
+                                    <constraint firstItem="GQ9-Q5-I2e" firstAttribute="centerX" secondItem="bAV-tS-qjZ" secondAttribute="centerX" id="aRI-Jm-BBe"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ms-3e-CXu">
+                                <rect key="frame" x="102" y="761" width="210" height="51"/>
+                                <color key="backgroundColor" red="1" green="0.51966128069999995" blue="0.32854220830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="6OI-ML-z8w"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="Qvn-26-jXg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" red="1" green="0.94936118410000003" blue="0.80096160969999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Пересчитать"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="6jm-LG-irH" eventType="touchUpInside" id="DA6-DM-BOo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DoR-Na-ti9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DoR-Na-ti9" firstAttribute="bottom" secondItem="4ms-3e-CXu" secondAttribute="bottom" constant="50" id="GDT-Mj-gy4"/>
+                            <constraint firstItem="bAV-tS-qjZ" firstAttribute="top" secondItem="EI2-e3-85r" secondAttribute="top" id="KQf-RD-pQ6"/>
+                            <constraint firstItem="bAV-tS-qjZ" firstAttribute="leading" secondItem="DoR-Na-ti9" secondAttribute="leading" id="M3O-gG-WOR"/>
+                            <constraint firstItem="bAV-tS-qjZ" firstAttribute="trailing" secondItem="DoR-Na-ti9" secondAttribute="trailing" id="fnU-Uw-N3e"/>
+                            <constraint firstItem="4ms-3e-CXu" firstAttribute="centerX" secondItem="EI2-e3-85r" secondAttribute="centerX" id="rMd-op-bXg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jbg-Di-7ll"/>
+                    <connections>
+                        <outlet property="backButton" destination="4ms-3e-CXu" id="RjN-ci-2bq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9W-5L-ExO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="93.75"/>
         </scene>
     </scenes>
     <resources>
