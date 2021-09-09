@@ -8,7 +8,7 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-    var result = 0.0
+    var result: Double!
     
     @IBOutlet var backButton: UIButton!
     @IBOutlet var resultLabel: UILabel!
