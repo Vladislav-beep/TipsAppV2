@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     
     @IBAction func resultButtonPressed(_ sender: UIButton) {
         
-        guard let textField = Double(billTextField.text ?? "") else { return }
+        guard let textField = Double(billTextField.text ?? "") else { showAlert(for: error) return }
         total = textField * (1.0 + doublePersent) / Double(friendsCount)
         }
         
@@ -64,5 +64,28 @@ class ViewController: UIViewController {
         resultVC?.result = total
         
     }
+    enum GetDataError: Error {
+        case url
+        case parse
+        case internet
+        
+        var message: String {
+            switch self {
+            case .url:
+                return "Неправильный  URL"
+            case .parse:
+                return "Данные некорректны"
+            case .internet:
+                return "Нет сети"
+            }
+        }
+    }
+    
+    private func showAlert(for error: GetDataError) {
+        let alert = UIAlertController(title: "Ошибка", message: error.message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+}
 }
 

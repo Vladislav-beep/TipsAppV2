@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="276" width="414" height="620"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="oqg-xR-0rO">
-                                        <rect key="frame" x="112" y="39" width="190" height="32"/>
+                                        <rect key="frame" x="112" y="60" width="190" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk9-jL-9ZK">
                                                 <rect key="frame" x="0.0" y="0.0" width="71" height="32"/>
@@ -54,13 +54,25 @@
                                             <segue destination="6jm-LG-irH" kind="show" id="H10-3G-Mms"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Выберите чаевые:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcf-aA-J98">
+                                        <rect key="frame" x="8" y="8" width="196" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="0sh-3C-t0h"/>
+                                            <constraint firstAttribute="height" constant="28" id="MDn-PR-wKY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" red="1" green="0.51966128069999995" blue="0.32854220830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.94936118413303983" blue="0.80096160968458541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="oqg-xR-0rO" firstAttribute="top" secondItem="Kgz-Qo-eUN" secondAttribute="top" constant="39" id="NNV-tG-u1J"/>
+                                    <constraint firstItem="oqg-xR-0rO" firstAttribute="top" secondItem="Kgz-Qo-eUN" secondAttribute="top" constant="60" id="NNV-tG-u1J"/>
                                     <constraint firstItem="PcY-Gu-jcJ" firstAttribute="centerX" secondItem="Kgz-Qo-eUN" secondAttribute="centerX" id="Og7-Iq-1qE"/>
                                     <constraint firstItem="oqg-xR-0rO" firstAttribute="centerX" secondItem="Kgz-Qo-eUN" secondAttribute="centerX" id="huH-dz-cBC"/>
                                     <constraint firstAttribute="bottom" secondItem="PcY-Gu-jcJ" secondAttribute="bottom" constant="80" id="sno-B9-Iln"/>
+                                    <constraint firstItem="vcf-aA-J98" firstAttribute="top" secondItem="Kgz-Qo-eUN" secondAttribute="top" constant="8" id="yq6-zc-igh"/>
+                                    <constraint firstItem="vcf-aA-J98" firstAttribute="leading" secondItem="Kgz-Qo-eUN" secondAttribute="leading" constant="8" id="zpg-FB-Lud"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-bO-7sN">
