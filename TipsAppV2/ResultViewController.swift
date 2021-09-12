@@ -19,9 +19,7 @@ class ResultViewController: UIViewController {
         resultLabel.text = String(format: "%.2f",result)
     }
     
-
     @IBAction func backButtonPressed(_ sender: UIButton) {
         dismiss(animated: true)
     }
-
 }
