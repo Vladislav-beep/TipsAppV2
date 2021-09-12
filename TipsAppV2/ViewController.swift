@@ -52,40 +52,45 @@ class ViewController: UIViewController {
         friendsCount = Int(stepper.value)
     }
     
-    @IBAction func resultButtonPressed(_ sender: UIButton) {
-        
-        guard let textField = Double(billTextField.text ?? "") else { showAlert(for: error) return }
-        total = textField * (1.0 + doublePersent) / Double(friendsCount)
-        }
-        
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultVC = segue.destination as? ResultViewController
         resultVC?.result = total
-        
-    }
-    enum GetDataError: Error {
-        case url
-        case parse
-        case internet
-        
-        var message: String {
-            switch self {
-            case .url:
-                return "Неправильный  URL"
-            case .parse:
-                return "Данные некорректны"
-            case .internet:
-                return "Нет сети"
-            }
-        }
     }
     
-    private func showAlert(for error: GetDataError) {
-        let alert = UIAlertController(title: "Ошибка", message: error.message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
-}
+    @IBAction func resultButtonPressed(_ sender: UIButton) {
+        var enteredDouble: Double?
+        let possibleDouble = billTextField.text ?? ""
+   
+        if let convertedNumber = Double(possibleDouble)  {
+            enteredDouble = convertedNumber
+        } else {
+            showAlert(title: "Ошибка", message: "Введите число")
+            return
+        }
+        
+        guard Int(stepper.value) != 0 else {
+            showAlert(title: "Упс!", message: "Дрезей не может быть ноль")
+            return
+        }
+        
+        guard zeroButton.isSelected || sevenButton.isSelected || twelweButton.isSelected else {
+            showAlert(title: "Упс...", message: "Выберите процент чаевых")
+            return
+        }
+        
+         total = (enteredDouble ?? 0.0) * (1.0 + doublePersent) / Double(friendsCount)
+            
+        performSegue(withIdentifier: "go", sender: nil)
+        }
+     
+   
+   
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
 }
 
